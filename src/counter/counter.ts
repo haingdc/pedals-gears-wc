@@ -3,24 +3,17 @@ import { customElement, property } from "lit/decorators.js";
 
 @customElement("lit-counter")
 class Counter extends LitElement {
+  @property({ type: Number })
+  count = 0;
 
-    @property({ type: Number }) count = 0;
-
-    @property({ attribute: false }) funcInReactComponent = () => {};
-  static override properties = {
-    funcInReactComponent: {
-      type: Function,
-      attribute: false,
-    },
-  };
-
+  @property({ attribute: false })
+  funcInReactComponent = () => {};
 
   override connectedCallback() {
     super.connectedCallback();
   }
 
   handleClick() {
-    // this.count++;
     this.funcInReactComponent();
   }
 
