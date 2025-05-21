@@ -1,6 +1,5 @@
 import { css, html, LitElement, unsafeCSS } from "lit";
-import {customElement, property} from 'lit/decorators.js';
-
+import { customElement, property } from "lit/decorators.js";
 
 // Import CSS as strings
 const buttonsCss = `
@@ -95,13 +94,18 @@ const buttonsCustomCss = `
 }
 `;
 
-@customElement('lit-button')
+@customElement("lit-button")
 export class LitButton extends LitElement {
-  @property({ type: String }) variant = 'default';
-  @property({ type: String }) size = 'normal';
-  @property({ type: Boolean }) disabled = false;
-  @property({ type: String }) type: 'button' | 'submit' | 'reset' | 'menu' = 'button';
-  @property({ type: String }) icon = '';
+  @property({ type: String })
+  variant = "default";
+  @property({ type: String })
+  size = "normal";
+  @property({ type: Boolean })
+  disabled = false;
+  @property({ type: String })
+  type: "button" | "submit" | "reset" | "menu" = "button";
+  @property({ type: String })
+  icon = "";
 
   constructor() {
     super();
@@ -185,7 +189,7 @@ export class LitButton extends LitElement {
     }
   `;
 
-  render() {
+  override render() {
     const variantClass = this.variant === "custom" ? "btn-custom" : "";
     const sizeClass = this.size === "large" ? "btn-large" : "";
 
@@ -208,4 +212,3 @@ export class LitButton extends LitElement {
     `;
   }
 }
-

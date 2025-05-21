@@ -1,8 +1,16 @@
 {
   "name": "pedals-gears-wc",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "private": false,
+  "version": "0.0.7",
+  "main": "dist/index.es.js",
+  "exports": {
+    ".": "./dist/index.es.js"
+  },
+  "types": "types/index.d.ts",
+  "files": [
+    "dist",
+    "types"
+  ],
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
