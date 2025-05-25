@@ -1,10 +1,13 @@
 {
   "name": "pedals-gears-wc",
   "private": false,
-  "version": "0.0.8",
+  "version": "0.0.13",
   "main": "dist/index.es.js",
   "exports": {
-    ".": "./dist/index.es.js"
+    ".": {
+      "types": "./types/index.d.ts",
+      "default": "./dist/index.es.js"
+    }
   },
   "types": "types/index.d.ts",
   "files": [

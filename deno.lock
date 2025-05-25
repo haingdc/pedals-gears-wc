@@ -5,7 +5,7 @@
     "npm:@eslint/eslintrc@^3.3.1": "3.3.1",
     "npm:@storybook/addon-essentials@^8.6.12": "8.6.12_storybook@8.6.12",
     "npm:@storybook/addon-onboarding@^8.6.12": "8.6.12_storybook@8.6.12",
-    "npm:@storybook/blocks@^8.6.12": "8.6.12_storybook@8.6.12_react@19.1.0_react-dom@19.1.0__react@19.1.0",
+    "npm:@storybook/blocks@^8.6.12": "8.6.12_react@19.1.0_react-dom@19.1.0__react@19.1.0_storybook@8.6.12",
     "npm:@storybook/builder-vite@^8.6.12": "8.6.12_storybook@8.6.12_vite@6.3.5__picomatch@4.0.2__@types+node@22.15.17_@types+node@22.15.17",
     "npm:@storybook/experimental-addon-test@^8.6.12": "8.6.12_@vitest+browser@3.1.3__playwright@1.52.0__vitest@3.1.3___@types+node@22.15.17___@vitest+browser@3.1.3___playwright@1.52.0___vite@6.3.5____@types+node@22.15.17____picomatch@4.0.2__@testing-library+dom@10.4.0__vite@6.3.5___picomatch@4.0.2___@types+node@22.15.17__@types+node@22.15.17_storybook@8.6.12_vitest@3.1.3__@types+node@22.15.17__@vitest+browser@3.1.3___playwright@1.52.0___vitest@3.1.3___@testing-library+dom@10.4.0___vite@6.3.5____picomatch@4.0.2____@types+node@22.15.17___@types+node@22.15.17__playwright@1.52.0__vite@6.3.5___@types+node@22.15.17___picomatch@4.0.2_playwright@1.52.0_@types+node@22.15.17_vite@6.3.5__picomatch@4.0.2__@types+node@22.15.17",
     "npm:@storybook/test@^8.6.12": "8.6.12_storybook@8.6.12_@testing-library+dom@10.4.0",
@@ -18,10 +18,13 @@
     "npm:eslint@^9.26.0": "9.26.0",
     "npm:lit@^3.3.0": "3.3.0",
     "npm:playwright@^1.52.0": "1.52.0",
+    "npm:react@^19.1.0": "19.1.0",
     "npm:storybook@8.6.12": "8.6.12",
     "npm:storybook@^8.6.12": "8.6.12",
+    "npm:typescript@*": "5.8.3",
     "npm:typescript@5.8.3": "5.8.3",
     "npm:typescript@^5.8.3": "5.8.3",
+    "npm:vite@*": "6.3.5_picomatch@4.0.2_@types+node@22.15.17",
     "npm:vite@6.3.5": "6.3.5_picomatch@4.0.2_@types+node@22.15.17",
     "npm:vite@^6.3.5": "6.3.5_picomatch@4.0.2_@types+node@22.15.17",
     "npm:vitest@^3.1.3": "3.1.3_@types+node@22.15.17_@vitest+browser@3.1.3__playwright@1.52.0__vitest@3.1.3__@testing-library+dom@10.4.0__vite@6.3.5___picomatch@4.0.2___@types+node@22.15.17__@types+node@22.15.17_playwright@1.52.0_vite@6.3.5__@types+node@22.15.17__picomatch@4.0.2"
@@ -367,6 +370,56 @@
         "fastq"
       ]
     },
+    "@nx/nx-darwin-arm64@21.1.2": {
+      "integrity": "sha512-9dO32jd+h7SrvQafJph6b7Bsmp2IotTE0w7dAGb4MGBQni3JWCXaxlMMpWUZXWW1pM5uIkFJO5AASW4UOI7w2w==",
+      "os": ["darwin"],
+      "cpu": ["arm64"]
+    },
+    "@nx/nx-darwin-x64@21.1.2": {
+      "integrity": "sha512-5sf+4PRVg9pDVgD53NE1hoPz4lC8Ni34UovQsOrZgDvwU5mqPbIhTzVYRDH86i/086AcCvjT5tEt7rEcuRwlKw==",
+      "os": ["darwin"],
+      "cpu": ["x64"]
+    },
+    "@nx/nx-freebsd-x64@21.1.2": {
+      "integrity": "sha512-E5HR44fimXlQuAgn/tP9esmvxbzt/92AIl0PBT6L3Juh/xYiXKWhda63H4+UNT8AcLRxVXwfZrGPuGCDs+7y/Q==",
+      "os": ["freebsd"],
+      "cpu": ["x64"]
+    },
+    "@nx/nx-linux-arm-gnueabihf@21.1.2": {
+      "integrity": "sha512-V4n6DE+r12gwJHFjZs+e2GmWYZdhpgA2DYWbsYWRYb1XQCNUg4vPzt+YFzWZ+K2o91k93EBnlLfrag7CqxUslw==",
+      "os": ["linux"],
+      "cpu": ["arm"]
+    },
+    "@nx/nx-linux-arm64-gnu@21.1.2": {
+      "integrity": "sha512-NFhsp27O+mS3r7PWLmJgyZy42WQ72c2pTQSpYfhaBbZPTI5DqBHdANa0sEPmV+ON24qkl5CZKvsmhzjsNmyW6A==",
+      "os": ["linux"],
+      "cpu": ["arm64"]
+    },
+    "@nx/nx-linux-arm64-musl@21.1.2": {
+      "integrity": "sha512-BgS9npARwcnw+hoaRsbas6vdBAJRBAj5qSeL57LO8Dva+e/6PYqoNyVJ0BgJ98xPXDpzM/NnpeRsndQGpLyhDw==",
+      "os": ["linux"],
+      "cpu": ["arm64"]
+    },
+    "@nx/nx-linux-x64-gnu@21.1.2": {
+      "integrity": "sha512-tjBINbymQgxnIlNK/m6B0P5eiGRSHSYPNkFdh3+sra80AP/ymHGLRxxZy702Ga2xg8RVr9zEvuXYHI+QBa1YmA==",
+      "os": ["linux"],
+      "cpu": ["x64"]
+    },
+    "@nx/nx-linux-x64-musl@21.1.2": {
+      "integrity": "sha512-+0V0YAOWMh1wvpQZuayQ7y+sj2MhE3l7z0JMD9SX/4xv9zLOWGv+EiUmN/fGoU/mwsSkH2wTCo6G6quKF1E8jQ==",
+      "os": ["linux"],
+      "cpu": ["x64"]
+    },
+    "@nx/nx-win32-arm64-msvc@21.1.2": {
+      "integrity": "sha512-E+ECMQIMJ6R47BMW5YpDyOhTqczvFaL8k24umRkcvlRh3SraczyxBVPkYHDukDp7tCeIszc5EvdWc83C3W8U4w==",
+      "os": ["win32"],
+      "cpu": ["arm64"]
+    },
+    "@nx/nx-win32-x64-msvc@21.1.2": {
+      "integrity": "sha512-J9rNTBOS7Ld6CybU/cou1Fg52AHSYsiwpZISM2RNM0XIoVSDk3Jsvh4OJgS2rvV0Sp/cgDg3ieOMAreekH+TKw==",
+      "os": ["win32"],
+      "cpu": ["x64"]
+    },
     "@pkgjs/parseargs@0.11.0": {
       "integrity": "sha512-+1VkjdD0QBLPodGrJUeqarH8VAIvQODIbwh9XpP5Syisf7YoQgsJKPNFoqqLQlu+VQ/tVSshMR6loPMn8U+dPg=="
     },
@@ -506,7 +559,7 @@
       "integrity": "sha512-kEezQjAf/p3SpDzLABgg4fbT48B6dkT2LiZCKTRmCrJVtuReaAr4R9MMM6Jsph6XjbIj/SvOWf3CMeOPXOs9sg==",
       "dependencies": [
         "@mdx-js/react",
-        "@storybook/blocks@8.6.12_react@19.1.0_react-dom@19.1.0__react@19.1.0_storybook@8.6.12",
+        "@storybook/blocks",
         "@storybook/csf-plugin",
         "@storybook/react-dom-shim",
         "react",
@@ -574,20 +627,6 @@
       ]
     },
     "@storybook/blocks@8.6.12_react@19.1.0_react-dom@19.1.0__react@19.1.0_storybook@8.6.12": {
-      "integrity": "sha512-DohlTq6HM1jDbHYiXL4ZvZ00VkhpUp5uftzj/CZDLY1fYHRjqtaTwWm2/OpceivMA8zDitLcq5atEZN+f+siTg==",
-      "dependencies": [
-        "@storybook/icons",
-        "react",
-        "react-dom",
-        "storybook@8.6.12",
-        "ts-dedent"
-      ],
-      "optionalPeers": [
-        "react",
-        "react-dom"
-      ]
-    },
-    "@storybook/blocks@8.6.12_storybook@8.6.12_react@19.1.0_react-dom@19.1.0__react@19.1.0": {
       "integrity": "sha512-DohlTq6HM1jDbHYiXL4ZvZ00VkhpUp5uftzj/CZDLY1fYHRjqtaTwWm2/OpceivMA8zDitLcq5atEZN+f+siTg==",
       "dependencies": [
         "@storybook/icons",
@@ -2767,6 +2806,19 @@
     "zod@3.24.4": {
       "integrity": "sha512-OdqJE9UDRPwWsrHjLN2F8bPxvwJBK22EHLWtanu0LSYr5YqzsaaW3RMgmjwr8Rypg5k+meEJdSPXJZXE/yqOMg=="
     }
+  },
+  "redirects": {
+    "https://esm.sh/@types/react@~18.2.79/index.d.ts": "https://esm.sh/@types/react@18.2.79/index.d.ts"
+  },
+  "remote": {
+    "https://esm.sh/@lit/react@1.0.0": "6dbe5f193df2ccdc7ef071a57768dcff7ae730260fa97381fab7c805aa4e287d",
+    "https://esm.sh/@lit/react@1.0.0/X-ZHJlYWN0QDE4LjIuMA/denonext/react.mjs": "718695a3332c92d4b4a51b66ecbcada8f5c91c3deef4fc155731ac1c417c0705",
+    "https://esm.sh/@lit/react@1.0.0/denonext/react.mjs": "718695a3332c92d4b4a51b66ecbcada8f5c91c3deef4fc155731ac1c417c0705",
+    "https://esm.sh/@lit/react@1.0.0?deps=react@18.2.0": "7cf58db0fa6a6a98ddf9c0bc258e78980d6fff9bb36e7b37f035d87e20377e9f",
+    "https://esm.sh/react@18.2.0": "fed8aeb7d240bb42a2167c9c7c6e842e128c7630cbcb08c4d61c9c1926f89c75",
+    "https://esm.sh/react@18.2.0/denonext/react.development.mjs": "dd8deaedcaa322b368ff19c784ac5e13ee2eaa9e3d00b253b179bb44fe4462f2",
+    "https://esm.sh/react@18.2.0/denonext/react.mjs": "a986c2876dc2f73879f395e677dc34cb751f260e69db16364810655f884df173",
+    "https://esm.sh/react@18.2.0?dev": "b751ce93e39c149a0e4868be4139e56c9915320655d53daa5f36ac1d6f97a800"
   },
   "workspace": {
     "packageJson": {

@@ -1,4 +1,23 @@
 {
-  "unstable": ["unsafe-proto"],
-  "nodeModulesDir": "auto"
+  "tasks": {
+    "publish-npm": "npm publish"
+  },
+  "unstable": [
+    "unsafe-proto",
+    "sloppy-imports"
+  ],
+  "nodeModulesDir": "auto",
+  "compilerOptions": {
+    "experimentalDecorators": true,
+    "lib": [
+      "ES2020",
+      "DOM",
+      "DOM.Iterable"
+    ],
+    "verbatimModuleSyntax": true,
+    "strict": true,
+    "noUnusedLocals": true,
+    "noUnusedParameters": true,
+    "noFallthroughCasesInSwitch": true
+  }
 }
