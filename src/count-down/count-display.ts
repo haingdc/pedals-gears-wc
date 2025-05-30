@@ -1,9 +1,7 @@
+import { html, LitElement } from "lit";
+import { customElement } from "lit/decorators.js";
 
-
-import {LitElement, html} from 'lit';
-import {customElement} from 'lit/decorators.js';
-
-@customElement('count-display')
+@customElement("count-display")
 export class CountDisplay extends LitElement {
   static override properties = {
     count: { type: Number },
@@ -14,6 +12,8 @@ export class CountDisplay extends LitElement {
   }
 
   override render() {
-    return html`<p>Count: ${this.count}</p>`;
+    return html`
+      <p>Count: ${this.count}</p>
+    `;
   }
 }

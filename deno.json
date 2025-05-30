@@ -1,6 +1,14 @@
 {
   "tasks": {
-    "publish-npm": "npm publish"
+    "publish-npm": {
+      "description": "Publishes the package to NPM.",
+      "command": "npm publish"
+    },
+    "bump-patch": {
+      "description": "Bumps the patch version of the package.",
+      "command": "npm version patch --no-git-tag-version",
+      "dependencies": ["build"]
+    }
   },
   "unstable": [
     "unsafe-proto",
@@ -19,5 +27,8 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true
+  },
+  "fmt": {
+    "lineWidth": 100
   }
 }

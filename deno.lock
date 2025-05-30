@@ -9,6 +9,7 @@
     "npm:@storybook/builder-vite@^8.6.12": "8.6.12_storybook@8.6.12_vite@6.3.5__picomatch@4.0.2__@types+node@22.15.17_@types+node@22.15.17",
     "npm:@storybook/experimental-addon-test@^8.6.12": "8.6.12_@vitest+browser@3.1.3__playwright@1.52.0__vitest@3.1.3___@types+node@22.15.17___@vitest+browser@3.1.3___playwright@1.52.0___vite@6.3.5____@types+node@22.15.17____picomatch@4.0.2__@testing-library+dom@10.4.0__vite@6.3.5___picomatch@4.0.2___@types+node@22.15.17__@types+node@22.15.17_storybook@8.6.12_vitest@3.1.3__@types+node@22.15.17__@vitest+browser@3.1.3___playwright@1.52.0___vitest@3.1.3___@testing-library+dom@10.4.0___vite@6.3.5____picomatch@4.0.2____@types+node@22.15.17___@types+node@22.15.17__playwright@1.52.0__vite@6.3.5___@types+node@22.15.17___picomatch@4.0.2_playwright@1.52.0_@types+node@22.15.17_vite@6.3.5__picomatch@4.0.2__@types+node@22.15.17",
     "npm:@storybook/test@^8.6.12": "8.6.12_storybook@8.6.12_@testing-library+dom@10.4.0",
+    "npm:@storybook/types@^8.6.14": "8.6.14_storybook@8.6.12",
     "npm:@storybook/web-components-vite@^8.6.12": "8.6.12_storybook@8.6.12_vite@6.3.5__picomatch@4.0.2__@types+node@22.15.17_lit@3.3.0_@types+node@22.15.17",
     "npm:@storybook/web-components@^8.6.12": "8.6.12_lit@3.3.0_storybook@8.6.12",
     "npm:@types/node@^22.15.17": "22.15.17",
@@ -17,6 +18,7 @@
     "npm:eslint-plugin-storybook@0.12": "0.12.0_eslint@9.26.0_typescript@5.8.3",
     "npm:eslint@^9.26.0": "9.26.0",
     "npm:lit@^3.3.0": "3.3.0",
+    "npm:open-props@^1.7.15": "1.7.15",
     "npm:playwright@^1.52.0": "1.52.0",
     "npm:react@^19.1.0": "19.1.0",
     "npm:storybook@8.6.12": "8.6.12",
@@ -765,6 +767,12 @@
       "integrity": "sha512-6VjZg8HJ2Op7+KV7ihJpYrDnFtd9D1jrQnUS8LckcpuBXrIEbaut5+34ObY8ssQnSqkk2GwIZBBBQYQBCVvkOw==",
       "dependencies": [
         "storybook@8.6.12_esbuild@0.25.4"
+      ]
+    },
+    "@storybook/types@8.6.14_storybook@8.6.12": {
+      "integrity": "sha512-33kzHZa7h6/EygeLZDcm1PNRTlybokz8dzAh2JYjpETf77pG8jhPmEfrI2oHSAdgNeK7A3OMcGA/EwEN7EJdzw==",
+      "dependencies": [
+        "storybook@8.6.12"
       ]
     },
     "@storybook/web-components-vite@8.6.12_storybook@8.6.12_vite@6.3.5__picomatch@4.0.2__@types+node@22.15.17_lit@3.3.0_@types+node@22.15.17": {
@@ -2076,6 +2084,9 @@
         "wrappy"
       ]
     },
+    "open-props@1.7.15": {
+      "integrity": "sha512-TvyN35N02w1wmIsz6SUInEo0RaVvSvIj794qlHjkmeTFuBYu2vzV6LbZyE5D8/c5UsGtRudl4ScK1jkabPBpGw=="
+    },
     "open@8.4.2": {
       "integrity": "sha512-7x81NCL719oNbsq/3mh+hVrAWmFuEYUqrq/Iw3kUzH8ReypT9QQ0BLoJS7/G9k6N81XjW4qHWtjWwe/9eLy1EQ==",
       "dependencies": [
@@ -2831,6 +2842,7 @@
         "npm:@storybook/builder-vite@^8.6.12",
         "npm:@storybook/experimental-addon-test@^8.6.12",
         "npm:@storybook/test@^8.6.12",
+        "npm:@storybook/types@^8.6.14",
         "npm:@storybook/web-components-vite@^8.6.12",
         "npm:@storybook/web-components@^8.6.12",
         "npm:@types/node@^22.15.17",
@@ -2839,6 +2851,7 @@
         "npm:eslint-plugin-storybook@0.12",
         "npm:eslint@^9.26.0",
         "npm:lit@^3.3.0",
+        "npm:open-props@^1.7.15",
         "npm:playwright@^1.52.0",
         "npm:storybook@^8.6.12",
         "npm:typescript@^5.8.3",

@@ -13,7 +13,7 @@ const config: StorybookConfig = {
     "@storybook/experimental-addon-test",
   ],
   core: {
-    builder: '@storybook/builder-vite', // 👈 The builder enabled here.
+    builder: "@storybook/builder-vite", // 👈 The builder enabled here.
   },
   framework: {
     name: "@storybook/web-components-vite",

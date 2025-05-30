@@ -42,14 +42,13 @@ class CountDown extends LitElement {
   }
 
   private handleClick() {
-    console.log('inspect.handleClick')
     this.dispatchEvent(
       new CustomEvent("Decrease", {
         bubbles: true,
         composed: true,
         detail: {
-          current_count: this.count
-        }
+          current_count: this.count,
+        },
       }),
     );
   }

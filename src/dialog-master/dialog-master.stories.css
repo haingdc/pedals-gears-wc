@@ -1,0 +1,119 @@
+.warning-message {
+  display: grid;
+  grid-template-columns: var(--size-fluid-3) 1fr;
+  gap: var(--size-3);
+  align-items: center;
+
+  & > svg {
+    inline-size: 100%;
+    stroke: var(--text-2);
+  }
+}
+
+.icon-headline {
+  display: flex;
+  gap: var(--size-3);
+  align-items: center;
+
+  & > svg {
+    inline-size: 2em;
+    stroke: var(--text-2);
+  }
+}
+
+@media (max-width: 767.98px) {
+  input[type="file"] {
+    inline-size: 100%;
+  }
+}
+
+.dialog-master-story-container {
+  dialog-master {
+    & > form {
+      display: grid;
+      grid-template-rows: auto 1fr auto;
+      align-items: start;
+      max-block-size: 80vh;
+      max-block-size: 80dvb;
+
+      & > article {
+        overflow-y: auto;
+        max-block-size: 100%; /* safari */
+        overscroll-behavior-y: contain;
+        display: grid;
+        justify-items: flex-start;
+        gap: var(--size-3);
+        box-shadow: var(--shadow-2);
+        z-index: var(--layer-1);
+        padding-inline: var(--size-5);
+        padding-block: var(--size-3);
+
+        @media (--OSlight) {
+          background: var(--surface-1);
+
+          &::-webkit-scrollbar {
+            background: var(--surface-1);
+          }
+        }
+
+        @media (--OSdark) {
+          border-block-start: var(--border-size-1) solid var(--surface-3);
+        }
+      }
+
+      & > header {
+        display: flex;
+        gap: var(--size-3);
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-block: var(--size-3);
+        padding-inline: var(--size-5);
+
+        & > button {
+          border-radius: var(--radius-round);
+          padding: 0.75ch;
+          aspect-ratio: 1;
+          flex-shrink: 0;
+          place-items: center;
+          stroke: currentColor;
+          stroke-width: 3px;
+        }
+      }
+
+      & > footer {
+        display: flex;
+        flex-wrap: wrap;
+        gap: var(--size-3);
+        justify-content: space-between;
+        align-items: flex-start;
+        padding-inline: var(--size-5);
+        padding-block: var(--size-3);
+
+        & > menu {
+          display: flex;
+          flex-wrap: wrap;
+          gap: var(--size-3);
+          padding-inline-start: 0;
+
+          &:only-child {
+            margin-inline-start: auto;
+          }
+
+          @media (max-width: 410px) {
+            & button[type="reset"] {
+              display: none;
+            }
+          }
+        }
+      }
+
+      & > :is(header, footer) {
+        background-color: var(--surface-2);
+
+        @media (--OSdark) {
+          background-color: var(--surface-1);
+        }
+      }
+    }
+  }
+}
