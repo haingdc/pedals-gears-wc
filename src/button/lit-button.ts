@@ -95,7 +95,7 @@ const buttonsCustomCss = `
 `;
 
 @customElement("lit-button")
-export class LitButton extends LitElement {
+class LitButton extends LitElement {
   @property({ type: String })
   variant = "default";
   @property({ type: String })
@@ -212,3 +212,22 @@ export class LitButton extends LitElement {
     `;
   }
 }
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "lit-button": LitButton;
+  }
+
+  namespace JSX {
+    interface IntrinsicElements {
+      "lit-button":
+        | React.DetailedHTMLProps<
+          React.HTMLAttributes<LitButton>,
+         LitButton
+        >
+        | Partial<LitButton>;
+    }
+  }
+}
+
+export default LitButton;

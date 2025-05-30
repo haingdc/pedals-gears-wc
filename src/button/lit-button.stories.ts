@@ -2,6 +2,7 @@ import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
 import type { Meta, StoryObj } from "@storybook/web-components";
 import "./lit-button.ts";
+import { action } from '@storybook/addon-actions';
 
 interface LitButtonProps {
   variant?: "default" | "custom";
@@ -10,6 +11,7 @@ interface LitButtonProps {
   type?: "button" | "submit" | "reset";
   icon?: string;
   slot?: string;
+  onClick?: (event: Event) => void;
 }
 
 type Story = StoryObj<LitButtonProps>;
@@ -45,6 +47,10 @@ const meta: Meta<LitButtonProps> = {
       control: "text",
       description: "Button label content",
     },
+    onClick: {
+      action: "clicked",
+      description: "Called when button is clicked",
+    },
   },
   args: {
     variant: "default",
@@ -54,18 +60,22 @@ const meta: Meta<LitButtonProps> = {
     icon: "",
     slot: "Button",
   },
-  render: (args) =>
-    html`
+  render: (args) => {
+    const handleClick = action('clicked');
+
+    return html`
       <lit-button
         variant="${ifDefined(args.variant)}"
         size="${ifDefined(args.size)}"
         ?disabled="${args.disabled}"
         type="${ifDefined(args.type)}"
         icon="${ifDefined(args.icon)}"
+        @click="${handleClick}"
       >
         ${args.slot}
       </lit-button>
-    `,
+    `;
+  }
 };
 
 export default meta;
@@ -108,5 +118,26 @@ export const Submit: Story = {
   args: {
     slot: "Submit",
     type: "submit",
+  },
+};
+
+export const WithClickHandler: Story = {
+  args: {
+    slot: "Click Me",
+    onClick: (event: Event) => {
+      alert('Button was clicked!');
+      console.log('Custom click handler:', event);
+    },
+  },
+};
+
+export const AlertOnClick: Story = {
+  args: {
+    slot: "Alert Button",
+    variant: "custom",
+    onClick: (event: Event) => {
+      const target = event.target as HTMLElement;
+      alert(`You clicked: ${target.textContent}`);
+    },
   },
 };
