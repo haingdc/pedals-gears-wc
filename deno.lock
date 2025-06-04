@@ -11,7 +11,7 @@
     "npm:@storybook/experimental-addon-test@^8.6.12": "8.6.14_@vitest+browser@3.1.3__playwright@1.52.0__vitest@3.1.3___@types+node@22.15.17___@vitest+browser@3.1.3___playwright@1.52.0___vite@6.3.5____@types+node@22.15.17____picomatch@4.0.2__@testing-library+dom@10.4.0__vite@6.3.5___picomatch@4.0.2___@types+node@22.15.17__@types+node@22.15.17_storybook@8.6.14_vitest@3.1.3__@types+node@22.15.17__@vitest+browser@3.1.3___playwright@1.52.0___vitest@3.1.3___@testing-library+dom@10.4.0___vite@6.3.5____picomatch@4.0.2____@types+node@22.15.17___@types+node@22.15.17__playwright@1.52.0__vite@6.3.5___@types+node@22.15.17___picomatch@4.0.2_playwright@1.52.0_@types+node@22.15.17_vite@6.3.5__picomatch@4.0.2__@types+node@22.15.17",
     "npm:@storybook/test@^8.6.12": "8.6.14_storybook@8.6.14_@testing-library+dom@10.4.0",
     "npm:@storybook/types@^8.6.14": "8.6.14_storybook@8.6.14",
-    "npm:@storybook/web-components-vite@^8.6.12": "8.6.14_storybook@8.6.14_vite@6.3.5__picomatch@4.0.2__@types+node@22.15.17_lit@3.3.0_@types+node@22.15.17",
+    "npm:@storybook/web-components-vite@^8.6.12": "8.6.14_storybook@8.6.14_vite@6.3.5__picomatch@4.0.2__@types+node@22.15.17_@types+node@22.15.17",
     "npm:@storybook/web-components@^8.6.12": "8.6.14_lit@3.3.0_storybook@8.6.14",
     "npm:@types/node@^22.15.17": "22.15.17",
     "npm:@vitest/browser@^3.1.3": "3.1.3_playwright@1.52.0_vitest@3.1.3__@types+node@22.15.17__@vitest+browser@3.1.3__playwright@1.52.0__vite@6.3.5___@types+node@22.15.17___picomatch@4.0.2_@testing-library+dom@10.4.0_vite@6.3.5__picomatch@4.0.2__@types+node@22.15.17_@types+node@22.15.17",
@@ -789,7 +789,7 @@
         "storybook@8.6.14"
       ]
     },
-    "@storybook/web-components-vite@8.6.14_storybook@8.6.14_vite@6.3.5__picomatch@4.0.2__@types+node@22.15.17_lit@3.3.0_@types+node@22.15.17": {
+    "@storybook/web-components-vite@8.6.14_storybook@8.6.14_vite@6.3.5__picomatch@4.0.2__@types+node@22.15.17_@types+node@22.15.17": {
       "integrity": "sha512-7lxz/hFMTSlhl1gkjqmEp9SchSHcoDCMJTu7LuM6fJWKLHydYB6zwIyL+qYvKDa+E+kgmUKc54yW5SqAWHkjoA==",
       "dependencies": [
         "@storybook/builder-vite",
