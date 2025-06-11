@@ -1,5 +1,5 @@
 import { html } from "lit";
-import { type Meta, type StoryObj } from "@storybook/web-components";
+import { type Meta, type StoryObj } from "@storybook/web-components-vite";
 import DialogMaster from "./dialog-master.ts";
 import type { Component } from "../types/storybook.ts";
 import "./dialog-master.stories.css";

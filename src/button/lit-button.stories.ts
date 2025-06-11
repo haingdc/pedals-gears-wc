@@ -1,8 +1,8 @@
 import { html } from "lit";
 import { ifDefined } from "lit/directives/if-defined.js";
-import type { Meta, StoryObj } from "@storybook/web-components";
+import type { Meta, StoryObj } from "@storybook/web-components-vite";
 import "./lit-button.ts";
-import { action } from '@storybook/addon-actions';
+import { action } from 'storybook/actions';
 
 interface LitButtonProps {
   variant?: "default" | "custom";
