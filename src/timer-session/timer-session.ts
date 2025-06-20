@@ -28,6 +28,8 @@ class TimerSession extends LitElement {
   @state()
   private _windowStateManager: WindowStateManager;
 
+  #isMainWindow: boolean | null = null;
+
   constructor() {
     super();
     this._windowStateManager = WindowStateManager.getInstance();
@@ -54,27 +56,37 @@ class TimerSession extends LitElement {
       WINDOW_STATE_MANAGER_EVENT.WINDOW_DEACTIVATE_EVENT,
       this.handleWindowDeactivate,
     );
-    if (this._timer) {
-      this._timer.removeEventListener(TIMER_UPDATE_EVENT, this.handleTimerUpdate);
-    }
+    this.cleanUpTimer();
   }
 
   private handleWindowUpdate = (evt: WindowUpdateEvent) => {
-    if (evt.isMainWindow) {
-      this.setTimer(new TimerSessionProvider());
-    } else {
-      this.setTimer(new TimerSessionConsumer());
+    if (!this.shouldSetTimer(evt)) {
+      return;
     }
+    if (evt.isMainWindow) {
+      this.setTimer(TimerSessionProvider.getInstance());
+    } else {
+      this.setTimer(TimerSessionConsumer.getInstance());
+    }
+    this.#isMainWindow = evt.isMainWindow;
   };
 
+  // Nếu không cần thiết, không cần cập nhật timer
+  private shouldSetTimer(event: WindowUpdateEvent) {
+    return this.#isMainWindow === null || this.#isMainWindow !== event.isMainWindow;
+  }
+
   private setTimer(value: TimerSessionService | null) {
-    const oldValue = this._timer;
-    if (oldValue) {
-      oldValue.removeEventListener(TIMER_UPDATE_EVENT, this.handleTimerUpdate);
-    }
+    this.cleanUpTimer();
     this._timer = value;
     if (this._timer) {
       this._timer.addEventListener(TIMER_UPDATE_EVENT, this.handleTimerUpdate);
+    }
+  }
+
+  private cleanUpTimer() {
+    if (this._timer) {
+      this._timer.removeEventListener(TIMER_UPDATE_EVENT, this.handleTimerUpdate);
     }
   }
 
@@ -82,7 +94,6 @@ class TimerSession extends LitElement {
     evt: TimerUpdateEvent<TimerSessionService>,
   ) => {
     this._ms = evt.value;
-    this.requestUpdate();
   };
 
   override render() {

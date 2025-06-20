@@ -154,9 +154,9 @@ class WindowStateManager {
   public addEventListener(eventName: string, callback: (event: WindowUpdateEvent) => void): void {
     if (eventName === WINDOW_UPDATE_EVENT) {
       this.#listeners.push(callback);
+      this.#emitEvent(WINDOW_UPDATE_EVENT);
       if (this.#listeners.length === 1) {
         this.#startHeartbeat();
-        this.#emitEvent(WINDOW_UPDATE_EVENT);
       }
     } else if (eventName === WINDOW_DEACTIVATE_EVENT) {
       this.#listenersDeactivate.push(callback);

@@ -15,7 +15,15 @@ import { type TimerSession } from "./timer-session.ts";
   - Ngay cả khi bạn mở nhiều tab trình duyệt, tất cả đều biết thời gian giống nhau!
  */
 class TimerSessionConsumer implements TimerSession {
+  static #instance: TimerSessionConsumer;
   #listeners: ((event: TimerUpdateEvent<this>) => void)[] = [];
+
+  public static getInstance(): TimerSessionConsumer {
+    if (!this.#instance) {
+      this.#instance = new TimerSessionConsumer();
+    }
+    return this.#instance;
+  }
 
   // Khi có bạn mới muốn nghe tin tức về thời gian
   public addEventListener(

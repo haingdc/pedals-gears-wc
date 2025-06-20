@@ -11,11 +11,19 @@ import { type TimerSession } from "./timer-session.ts";
  * as well as event listeners for the 'timerupdate' event.
  */
 class TimerSessionProvider implements TimerSession {
+  static #instance: TimerSessionProvider;
   // Số giây đã đếm được (ban đầu là rỗng)
   #ms = NaN;
   #idTimer: number | null = null;
   // Ai muốn biết khi thời gian thay đổi
   #listeners: ((event: TimerUpdateEvent<this>) => void)[] = [];
+
+  public static getInstance(): TimerSessionProvider {
+    if (!this.#instance) {
+      this.#instance = new TimerSessionProvider();
+    }
+    return this.#instance;
+  }
 
   #run(): void {
     this.#ms += 1000;
@@ -35,11 +43,10 @@ class TimerSessionProvider implements TimerSession {
   }
 
   #play(): void {
-    const isPlaying = this.#idTimer !== null;
-    if (!isPlaying) {
-      this.#ms = UtilsTimerSession.getValue();
+    // Đưa vào microtask để đếm thời gian
+    Promise.resolve().then(() => {
       this.#run();
-    }
+    });
   }
 
   #reset(): void {
@@ -53,9 +60,13 @@ class TimerSessionProvider implements TimerSession {
   addEventListener(eventName: string, callback: (event: TimerUpdateEvent<this>) => void): void {
     if (eventName === TIMER_UPDATE_EVENT) {
       this.#listeners.push(callback);
-      if (this.#listeners.length > 0) {
+      const isPlaying = !Number.isNaN(this.#ms);
+      if (!isPlaying) {
+        this.#ms = UtilsTimerSession.getValue();
         this.#play();
       }
+      // Ngay lập tức báo tin mới nhất
+      this.#emitEvent(TIMER_UPDATE_EVENT);
     }
   }
 
