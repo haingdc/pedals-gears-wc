@@ -1,24 +1,21 @@
-// import type { Preview } from '@storybook/react'
-
-// const preview: Preview = {
-//   parameters: {
-//     controls: {
-//       matchers: {
-//        color: /(background|color)$/i,
-//        date: /Date$/i,
-//       },
+// export const parameters = {
+//   actions: { argTypesRegex: "^on[A-Z].*" },
+//   controls: {
+//     matchers: {
+//       color: /(background|color)$/i,
+//       date: /Date$/,
 //     },
 //   },
 // };
 
-// export default preview;
+/* separator */
 
-export const parameters = {
-  actions: { argTypesRegex: "^on[A-Z].*" },
-  controls: {
-    matchers: {
-      color: /(background|color)$/i,
-      date: /Date$/,
-    },
-  },
+import { type Preview } from "@storybook/web-components-vite";
+
+import "../src/dialog-master/dialog-master.css";
+
+const preview: Preview = {
+  parameters: {},
 };
+
+export default preview;

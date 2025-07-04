@@ -14,7 +14,7 @@ class TimerSessionProvider implements TimerSession {
   static #instance: TimerSessionProvider;
   // Số giây đã đếm được (ban đầu là rỗng)
   #ms = NaN;
-  #idTimer: number | null = null;
+  #idTimer: ReturnType<typeof setTimeout> | null = null;
   // Ai muốn biết khi thời gian thay đổi
   #listeners: ((event: TimerUpdateEvent<this>) => void)[] = [];
 

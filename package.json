@@ -1,18 +1,51 @@
 {
   "name": "pedals-gears-wc",
   "private": false,
-  "version": "0.0.27",
+  "version": "0.0.40",
+  "type": "module",
   "main": "dist/index.es.js",
   "exports": {
     ".": {
       "types": "./types/index.d.ts",
+      "import": "./dist/index.es.js",
       "default": "./dist/index.es.js"
+    },
+    "./counter": {
+      "types": "./types/counter/counter.d.ts",
+      "import": "./dist/counter.es.js",
+      "default": "./dist/counter.es.js"
+    },
+    "./button": {
+      "types": "./types/button/lit-button.d.ts",
+      "import": "./dist/button.es.js",
+      "default": "./dist/button.es.js"
+    },
+    "./count-down": {
+      "types": "./types/count-down/count-down.d.ts",
+      "import": "./dist/count-down.es.js",
+      "default": "./dist/count-down.es.js"
+    },
+    "./dialog-master": {
+      "types": "./types/dialog-master/dialog-master.d.ts",
+      "import": "./dist/dialog-master.es.js",
+      "default": "./dist/dialog-master.es.js"
+    },
+    "./count-down-gang": {
+      "types": "./types/count-down-gang/count-down-gang.d.ts",
+      "import": "./dist/count-down-gang.es.js",
+      "default": "./dist/count-down-gang.es.js"
     }
   },
   "types": "types/index.d.ts",
+  "sideEffects": [
+    "./src/count-down/count-display.ts",
+    "./dist/count-display.es.js"
+  ],
   "files": [
     "dist",
-    "types"
+    "types",
+    "dist/**/*.map",
+    "types/**/*.map"
   ],
   "scripts": {
     "dev": "vite",
@@ -55,8 +88,5 @@
   "overrides": {
     "storybook": "$storybook"
   },
-  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e",
-  "dependencies": {
-    "pedals-gears-wc": "^0.0.22"
-  }
+  "packageManager": "yarn@1.22.22+sha512.a6b2f7906b721bba3d67d4aff083df04dad64c399707841b7acf00f6b133b7ac24255f2652fa22ae3534329dc6180534e98d17432037ff6fd140556e2bb3137e"
 }

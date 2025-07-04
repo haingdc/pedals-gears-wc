@@ -2,10 +2,10 @@ import { LOCAL_STORAGE } from "../utils/local-storage-const.ts";
 
 const WINDOW_UPDATE_EVENT = "windowupdate";
 const WINDOW_DEACTIVATE_EVENT = "windowdeactivate";
-enum WINDOW_STATE_MANAGER_EVENT {
-  WINDOW_UPDATE_EVENT = "windowupdate",
-  WINDOW_DEACTIVATE_EVENT = "windowdeactivate",
-}
+const WINDOW_STATE_MANAGER_EVENT = {
+  WINDOW_UPDATE_EVENT: "windowupdate",
+  WINDOW_DEACTIVATE_EVENT: "windowdeactivate",
+} as const;
 
 interface WindowUpdateEvent {
   isMainWindow: boolean;
@@ -45,7 +45,7 @@ class WindowStateManager {
   #listeners: ((event: WindowUpdateEvent) => void)[] = [];
 
   #listenersDeactivate: ((event: WindowUpdateEvent) => void)[] = [];
-  #heartbeatInterval: number | null = null;
+  #heartbeatInterval: ReturnType<typeof setTimeout> | null = null;
 
   constructor() {
     this.#windowId = Date.now().toString();

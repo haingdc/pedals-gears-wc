@@ -1,4 +1,3 @@
-import "./dialog-master.css";
 import { css, html, LitElement } from "lit";
 import { customElement, query } from "lit/decorators.js";
 

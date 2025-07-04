@@ -2,7 +2,7 @@ import { html, LitElement } from "lit";
 import { customElement } from "lit/decorators.js";
 
 @customElement("count-display")
-export class CountDisplay extends LitElement {
+class CountDisplay extends LitElement {
   static override properties = {
     count: { type: Number },
   };
@@ -17,3 +17,22 @@ export class CountDisplay extends LitElement {
     `;
   }
 }
+
+declare global {
+  interface HTMLElementTagNameMap {
+    "count-display": CountDisplay;
+  }
+
+  namespace JSX {
+    interface IntrinsicElements {
+      "count-display":
+        | React.DetailedHTMLProps<
+          React.HTMLAttributes<CountDisplay>,
+          CountDisplay
+        >
+        | Partial<CountDisplay>;
+    }
+  }
+}
+
+export default CountDisplay;

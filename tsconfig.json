@@ -13,6 +13,10 @@
     "verbatimModuleSyntax": true,
     "moduleDetection": "force",
     "noEmit": false,
+    "declaration": true,
+    "emitDeclarationOnly": true,
+    "declarationMap": true,
+    "outDir": "./types",
 
     /* Linting */
     "strict": true,
@@ -20,10 +24,7 @@
     "noUnusedParameters": true,
     "erasableSyntaxOnly": true,
     "noFallthroughCasesInSwitch": true,
-    "noUncheckedSideEffectImports": true,
-    "declaration": true,
-    "emitDeclarationOnly": true,
-    "outDir": "./types"
+    "noUncheckedSideEffectImports": true
   },
   "include": ["src/**/*.ts"],
   "exclude": ["src/**/*.stories.ts"]
